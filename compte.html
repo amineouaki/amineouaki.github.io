@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>amine.com</title>
+		<meta charset utf-8>
+		<link rel="stylesheet" type="text/css" href="comp.css">
+	</head>
+	<script type="text/javascript">
+ 		function Verifcation(){
+ 			a=formulaire1.a1.value;
+ 			exp=/^[w]{3}[.]+[a-zA-Z]+[@]+[a-zA-Z]+[.][c][o][m]$/
+ 			var X=document.forms["formulaire1"]["ami1"].value;
+ 			var A="www.aminouakib@gmail.com";
+			var Y=document.forms["formulaire1"]["ami2"].value;
+ 			var B="amine1999";
+ 			if(X!=A){
+ 			document.getElementById("ami5").innerHTML="your email is false";return false;
+ 			}
+ 			///^[a-zA-Z ]$/;
+ 			// a=formulaire1.a2.value;
+ 			// exp=/^[a-zA-Z]+[0-9]+$/;exp.test(a)==false &&
+ 			if(Y!=B ){
+ 				document.getElementById("ami5").innerHTML="your password is false";return false;
+ 			}
+ 		}
+ 		
+ 	</script>
+	<body>
+		<div class="form">
+		<form name="formulaire1" id="double" method="POST">
+			
+			<h3 class="med" >connected</h3>
+			<p class="amine1">User name : </p><input type="text" name="a1" id="ami1" required="required" >
+			<p class="amine2">Password :</p> <input type="password" name="a2" id="ami2" required="required" >
+			<p class="amine3">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <a href="resultat.html"><input type="button" id="ami3" required="required" value="Login" onclick="return Verifcation()"></a>
+			&nbsp  &nbsp <input type="reset" id="ami4" value="reset"></p>
+			<label class="amine4" id="ami5"></label>
+		</form>
+	</div>
+
+	</body>
+</html>

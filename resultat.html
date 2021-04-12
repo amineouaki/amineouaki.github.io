@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>resultat</title>
+	<link rel="stylesheet" type="text/css" href="comp2.css">
+	<script type="text/javascript">
+		function Calculer(){
+			var nom=document.forms["formulaire2"]["ami11"].value;
+			var prenom=document.forms["formulaire2"]["ami12"].value;
+			var bd1=document.forms["formulaire2"]["ami13"].value;
+			var bd2=document.forms["formulaire2"]["ami14"].value;
+			var poo=document.forms["formulaire2"]["ami17"].value;
+			var reseaux=document.forms["formulaire2"]["ami18"].value;
+			a=formulaire2.a11.value;
+			b=formulaire2.a12.value;
+			exp=/^[a-zA-Z ]+$/;
+			if(exp.test(a)==false){alert("fausse");return false;}
+			b=formulaire2.a12.value;
+			exp=/^[a-zA-Z]+$/;
+			if (exp.test(b)==false) {alert("fausse");return false;}
+
+			if(isNaN(bd1) || isNaN(bd2) || isNaN(poo) || isNaN(reseaux) ) {
+				alert("NAN");return false;
+			} else {return true;}
+
+}
+
+	function Moyen(){
+			var nom=document.forms["formulaire2"]["ami11"].value;
+			var prenom=document.forms["formulaire2"]["ami12"].value;
+			var bd1=Number(document.forms["formulaire2"]["ami13"].value);
+			var bd2=Number(document.forms["formulaire2"]["ami14"].value);
+			var poo=Number(document.forms["formulaire2"]["ami15"].value);
+			var reseaux=Number(document.forms["formulaire2"]["ami18"].value);
+			var some=bd1+bd2+poo+reseaux;
+			moyen=some/4;
+			document.getElementById("dd").innerHTML=nom+" "+prenom;
+			if(isNaN(bd1)){document.getElementById("dd1").innerHTML="valeur numerique"}
+				else{
+			document.getElementById("dd1").innerHTML=bd1;}
+			if(isNaN(bd2)){document.getElementById("dd2").innerHTML="valeur numerique"}
+					else{
+			document.getElementById("dd2").innerHTML=bd2;}
+			if(isNaN(poo)){document.getElementById("dd3").innerHTML="valeur numerique"}
+					else{
+			document.getElementById("dd3").innerHTML=poo;}
+			if(isNaN(reseaux)){document.getElementById("dd6").innerHTML="valeur numerique"}
+					else{
+			document.getElementById("dd6").innerHTML=reseaux;}
+			document.getElementById("dd7").innerHTML=moyen;
+		}
+	</script>
+</head>
+<body>
+	<div class="form2">
+	<div class="form">
+		<form name="formulaire2" id="double2" method="POST">
+			
+			<h3 class="medo" >Saisisez vos notes</h3>
+			<table>
+			<tr><td> Nom : </td><td><input type="text" name="a11" id="ami11" required="required" ></td></tr>
+			<tr> <td>Prenom :</td><td> <input type="text" name="a12" id="ami12" required="required" ></td></tr>
+			<tr> <td>Base de donne I :</td><td> <input type="text" name="a13" id="ami13" required="required" ></td></tr>
+			<tr><td>Base de donne II:</td><td><input type="text" name="a14" id="ami14" required="required" ></td></tr>
+			<tr><td> POO:</td><td><input type="text" name="a15" id="ami15" required="required" ></td></tr>
+			<tr><td>Reseaux:</td><td><input type="text" name="a18" id="ami18" required="required" ></td></tr>
+			<tr><td></td><td>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+		<input type="button" id="ami19" required="required" value="resultat" onclick="Moyen()">
+			&nbsp  &nbsp <input type="reset" id="ami20" value="supprimer" ></td></tr>
+		</table>
+		<p id="coco"></p>
+		</form>
+	</div>
+	<div class="form1">
+		<p class="aa">Resultat Provisoire</p>
+		<table border="1" width=100%>
+			<tr>
+				<td colspan="2" width=33% align="center"> Nom et Prenom :</td>
+				<td id="dd" width=33% align="center"></td>
+			</tr>
+			<tr>
+				<td width=33% align="center">Code Module</td>
+				<td width=33% align="center">Nom de module</td>
+				<td width=33% align="center">Note</td>
+			</tr>
+			<tr>
+				<td width=33% align="center">M1</td>
+				<td width=33% align="center">Base de donne I</td>
+				<td id="dd1" width=33% align="center"></td>
+			</tr>
+			<tr>
+				<td width=33% align="center">M2</td>
+				<td width=33% align="center">Base de donne II</td>
+				<td id="dd2" width=33% align="center"></td>
+			</tr>
+			<tr>
+				<td width=33% align="center">M3</td>
+				<td width=33% align="center">POO</td>
+				<td id="dd3" width=33% align="center"></td>
+			</tr>
+			<tr>
+				<td width=33% align="center">M4</td>
+				<td width=33% align="center">Reseaux Informatique</td>
+				<td id="dd6" width=33% align="center"></td>
+			</tr>
+			<tr>
+				<td colspan="2" width=33% align="center"> Moyen general</td>
+				<td id="dd7" width=33% align="center"></td>
+			</tr>
+		</table>
+	</div>
+</div>
+</body>
+</html>
+

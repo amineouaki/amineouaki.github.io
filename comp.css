@@ -1,0 +1,90 @@
+body{
+	margin:0;
+	padding:0;
+	background-image: url(abc.jpg);
+	-webkit-background-size:cover;
+	background-size: cover;
+	font-family: tahoma,geneva,verdana,sans-serif;
+}
+
+.form{
+	position:absolute;
+	left:34%;
+
+	top :3%;
+	/*transform:translate(-50,-50);*/
+	box-sizing: border-box;
+	background-color: rgba(0,0,0,0.5);
+	padding:160px;
+	border-radius: 5px;
+	border:1px solid black;
+}
+
+.med{
+	padding:0;
+	margin: 0;
+	color:#fff;
+	text-align: center;
+	font-weight: 60px;
+	font-family: tahoma,geneva,verdana,sans-serif;
+}
+
+.form p{
+	margin:0;
+	padding-top:35px;
+	padding-bottom: 12px;
+	color:white;
+	font-weight: 20px;
+
+}
+
+.form input[type="text"]{
+	padding:0;
+	margin:0;
+	position: absolute;
+}
+
+.form input[type="password"]{
+	padding: 0;
+	margin:0;
+	position: absolute;
+
+}
+
+.form input[type=text] , .form input[type=password]{
+	border:none;
+	display: 25px;
+	outline: none;
+	color: white;
+	height: 30px;
+	width:200px;
+	background-color: transparent;
+	border-bottom: 1px solid #fff;
+	font-weight: 200px;
+}
+/*
+.form input[type=text]:hover{
+	color: blue;
+
+}
+*/
+.form .amine3 input[type=button] , .form .amine3 input[type=reset]{
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	font-family: Verdana;
+	background-color: rgba(0,0,0,0.5);
+	color: white;
+}
+
+.form .amine4 {
+	color:red;
+	font-family: Verdana;
+	font-weight: bold;
+
+}
+
+
+
+
