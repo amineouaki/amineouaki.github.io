@@ -1,16 +1,21 @@
 body{
 	margin: 0;
 	padding: 0;
-	background-image: url(abc.jpg);
+	background-color: rgba(0,0,0,0.7);
+	position: absolute;
 	-webkit-background-size:cover;
 	background-size: cover;
 	font-family: tahoma,geneva,verdana,sans-serif;
 }
 
+.form2{
+	
+	padding: 0 450px 0 850px;
+}
 .form{
 	position:absolute;
 	left:5%;
-	top: 1%;
+	top: 2%;
 	/*transform:translate(-50,-50);*/
 	box-sizing: border-box;
 	padding-top:25px;
@@ -36,21 +41,28 @@ body{
 }
 
 .form1 .aa{
-	padding:0;
+	padding-top: 12px;
+	padding-bottom: 12px;
 	font-size: 20px;
 	margin-left:-220px;
-	color:#fff;
+	color:black;
 	text-align: center;
 	font-weight: bold;
 	font-family: tahoma,geneva,verdana,sans-serif;
 
 }
+.form h3{
+	padding-top: 30px;
+
+}
 .medo{
+	margin-top: 10px;
 	padding:0;
 	margin: 0;
-	color:#fff;
+	color: black;
 	text-align: center;
-	font-weight: 60px;
+	font-size: 20px;
+	font-weight: bold;
 	font-family: tahoma,geneva,verdana,sans-serif;
 }
 .form table{
@@ -62,15 +74,16 @@ body{
 	margin:0;
 	padding-top:35px;
 	padding-bottom: 5px;
-	color:white;
+	color: black;
 	width: 280px;
-	font-weight: 20px;
+	font-size: 18px;
+	font-weight: bold;
 }
 .form p{
 	margin:0;
 	padding-top:35px;
 	padding-bottom: 5px;
-	color:white;
+	color: black;
 	font-weight: 20px;
 }
 .form table tr td input[type="text"]{
@@ -81,13 +94,15 @@ body{
 	border:none;
 	display: 25px;
 	outline: none;
-	color: white;
-	height: 10px;
+	color: black;
+	height: 18px;
 	width:200px;
 	background-color: transparent;
-	border-bottom: 1px solid #fff;
-	font-weight: 200px;
+	border-bottom: 2px solid #fff;
+	font-weight: bold;
+	font-size: 20px;
 }
+
 
 .form table tr td input[type=button] , .form table tr td input[type=reset]{
 	margin-top: 25px;
@@ -101,15 +116,17 @@ body{
 }
 
 .form1 table{
+	border-color: green;
 	width: 500px;
 	height: 600px;
-	padding: O;
+	padding: 0;
 	margin-left: -270px; 
 }
 
 .form1 table tr td{
-	color: #fff;
+	color: black;
 	font-size: 18px;
+	font-weight: bold;
 }
 
 .form1 table tr td .dd7{
@@ -118,6 +135,6 @@ body{
 }
 
 .form1 table tr #dd3 , .form1 table tr #dd ,.form1 table tr #dd1 , .form1 table tr #dd2 , .form1 table tr #dd6 , .form1 table tr #dd7{
-	color: red;
+	color: blue;
 	font-weight: bold;
 }

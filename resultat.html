@@ -35,17 +35,27 @@
 			var some=bd1+bd2+poo+reseaux;
 			moyen=some/4;
 			document.getElementById("dd").innerHTML=nom+" "+prenom;
-			if(isNaN(bd1)){document.getElementById("dd1").innerHTML="valeur numerique"}
-				else{
-			document.getElementById("dd1").innerHTML=bd1;}
-			if(isNaN(bd2)){document.getElementById("dd2").innerHTML="valeur numerique"}
-					else{
-			document.getElementById("dd2").innerHTML=bd2;}
-			if(isNaN(poo)){document.getElementById("dd3").innerHTML="valeur numerique"}
-					else{
+			if(isNaN(bd1)){
+				document.getElementsByName("a13")[0].value ="";}
+				else if(bd1<0 || bd1>20){
+					document.getElementsByName("a13")[0].value = "valeur entre 0 et 20";
+				}
+				else{document.getElementById("dd1").innerHTML=bd1;}
+			if(isNaN(bd2)){
+				document.getElementsByName("a14")[0].value ="";}
+				else if(bd2<0 || bd2>20){
+					document.getElementsByName("a14")[0].value = "valeur entre 0 et 20";}
+					else{document.getElementById("dd2").innerHTML=bd2;}
+			if(isNaN(poo)){
+				document.getElementsByName("a15")[0].value ="" ;}
+				else if(poo<0 || poo>20){
+					document.getElementsByName("a15")[0].value ="valeur entre 0 et 20";
+				}else{
 			document.getElementById("dd3").innerHTML=poo;}
-			if(isNaN(reseaux)){document.getElementById("dd6").innerHTML="valeur numerique"}
-					else{
+			if(isNaN(reseaux)){document.getElementsByName("a18")[0].value ="";}
+				else if(reseaux<0 || reseaux>20){
+					document.getElementsByName("a18")[0].value ="valeur entre 0 et 20";
+				}else{
 			document.getElementById("dd6").innerHTML=reseaux;}
 			document.getElementById("dd7").innerHTML=moyen;
 		}
@@ -58,14 +68,16 @@
 			
 			<h3 class="medo" >Saisisez vos notes</h3>
 			<table>
-			<tr><td> Nom : </td><td><input type="text" name="a11" id="ami11" required="required" ></td></tr>
-			<tr> <td>Prenom :</td><td> <input type="text" name="a12" id="ami12" required="required" ></td></tr>
-			<tr> <td>Base de donne I :</td><td> <input type="text" name="a13" id="ami13" required="required" ></td></tr>
-			<tr><td>Base de donne II:</td><td><input type="text" name="a14" id="ami14" required="required" ></td></tr>
-			<tr><td> POO:</td><td><input type="text" name="a15" id="ami15" required="required" ></td></tr>
-			<tr><td>Reseaux:</td><td><input type="text" name="a18" id="ami18" required="required" ></td></tr>
+			<tr><td> Nom : </td><td><input type="text" name="a11" id="ami11"  required onclick="this.value=' '"></td></tr>
+			<tr> <td>Prenom :</td><td> <input type="text" name="a12" id="ami12" required onclick="this.value=' '"></td></tr>
+			<tr> <td>Base de donne I :</td><td> <input type="text" name="a13" id="ami13" required onclick="this.value=' '" ></td></tr>
+			<tr><td>Base de donne II:</td><td><input type="text" name="a14" id="ami14" onclick="this.value=' '" ></td></tr>
+			<tr><td> POO:</td><td><input type="text" name="a15" id="ami15"  onclick="this.value=' '"></td></tr>
+			<tr><td>Reseaux:</td><td><input type="text" name="a18" id="ami18"  onclick="this.value=' '" ></td></tr>
+			<tr><td>Ro:</td><td><input type="text" name="a16" id="ami16"  onclick="this.value=' '" ></td></tr>
+			<tr><td>SI:</td><td><input type="text" name="a17" id="ami17"  onclick="this.value=' '" ></td></tr>
 			<tr><td></td><td>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
-		<input type="button" id="ami19" required="required" value="resultat" onclick="Moyen()">
+		<input type="button" id="ami19"  value="resultat" onclick="Moyen()">
 			&nbsp  &nbsp <input type="reset" id="ami20" value="supprimer" ></td></tr>
 		</table>
 		<p id="coco"></p>
